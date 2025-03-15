@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Поле ввода "Откуда" -->
+    <EditText
+        android:id="@+id/etFrom"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Откуда"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Поле ввода "Куда" -->
+    <EditText
+        android:id="@+id/etTo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Куда"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFrom"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Выбор даты -->
+    <Button
+        android:id="@+id/btnSelectDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Выбрать дату"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTo"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Выбор времени -->
+    <Button
+        android:id="@+id/btnSelectTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Выбрать время"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSelectDate"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Выбор типа транспорта -->
+    <Spinner
+        android:id="@+id/spinnerTransport"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSelectTime"
+        android:entries="@array/transport_options"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Кнопка "Найти" -->
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Найти"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerTransport"
+        android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

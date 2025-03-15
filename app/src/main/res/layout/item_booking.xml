@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tv_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Маршрут: Москва - Санкт-Петербург"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата: 10 марта 2025"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Время: 12:30"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_cancel_booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Отменить бронь"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white"/>
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_bookings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
